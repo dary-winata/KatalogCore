@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol KatalogUseCase {
+public protocol KatalogUseCase {
     associatedtype Response
     
     func getKatalog(page: Int) -> Observable<[Response]>

@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol RemoteDataSource {
+public protocol RemoteDataSource {
     associatedtype Response
     
     func fetchAllGamesWithPagination(_ page: Int) -> Observable<[Response]>

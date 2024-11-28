@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol FavoriteUseCase {
+public protocol FavoriteUseCase {
     associatedtype Response
     
     func getAllFavorite() -> Observable<[Response]>

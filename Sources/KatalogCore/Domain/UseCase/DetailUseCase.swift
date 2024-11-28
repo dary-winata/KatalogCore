@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol DetailUseCase {
+public protocol DetailUseCase {
     associatedtype Response
     associatedtype Request
     

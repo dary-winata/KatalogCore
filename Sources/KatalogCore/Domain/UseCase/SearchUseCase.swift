@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol SearchUseCase {
+public protocol SearchUseCase {
     associatedtype Response
     
     func getSearchedKatalog(page: Int, with keyword: String) -> Observable<[Response]>
