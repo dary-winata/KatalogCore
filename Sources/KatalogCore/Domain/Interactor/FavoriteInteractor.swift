@@ -15,11 +15,11 @@ public struct FavoriteInteractor<Response, Repo: Repository>: FavoriteUseCase wh
         self.repo = repo
     }
     
-    func getAllFavorite() -> Observable<[Response]> {
+    public func getAllFavorite() -> Observable<[Response]> {
         repo.fetchAllFavorite()
     }
     
-    func deleteFavoriteGame(with id: Int) -> Observable<Bool> {
+    public func deleteFavoriteGame(with id: Int) -> Observable<Bool> {
         repo.deleteFavoriteGame(with: id)
     }
 }

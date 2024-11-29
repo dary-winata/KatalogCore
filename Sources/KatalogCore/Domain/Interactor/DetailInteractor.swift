@@ -15,15 +15,15 @@ public struct DetailInteractor<Request, Response, Repo: Repository>: DetailUseCa
         self.repository = repository
     }
     
-    func getDetailed(with id: Int) -> Observable<Response> {
+    public func getDetailed(with id: Int) -> Observable<Response> {
         repository.getDetailKatalog(with: id)
     }
     
-    func saveFavoriteGame(with model: Request) -> Observable<Bool> {
+    public func saveFavoriteGame(with model: Request) -> Observable<Bool> {
         repository.saveFavoriteGame(with: model)
     }
     
-    func deleteFavoriteGame(with id: Int) -> Observable<Bool> {
+    public func deleteFavoriteGame(with id: Int) -> Observable<Bool> {
         repository.deleteFavoriteGame(with: id)
     }
 }

@@ -14,7 +14,7 @@ public struct SearchInteractor<Response, Repo: Repository>: SearchUseCase where 
         self.repo = repo
     }
     
-    func getSearchedKatalog(page: Int, with keyword: String) -> RxSwift.Observable<[Response]> {
+    public func getSearchedKatalog(page: Int, with keyword: String) -> RxSwift.Observable<[Response]> {
         repo.getSearchedKatalog(page: page, keyword: keyword)
     }
 }

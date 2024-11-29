@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ImageCached {
-    static let shared = NSCache<NSString, UIImage>()
+public class ImageCached {
+    public static let shared = NSCache<NSString, UIImage>()
 
     private init() {
         ImageCached.shared.countLimit = 100
@@ -17,7 +17,7 @@ class ImageCached {
 }
 
 extension UIImageView {
-    func load(url: URL?, placeholder: UIImage? = nil) {
+    public func load(url: URL?, placeholder: UIImage? = nil) {
         self.image = placeholder
         guard let url else {
             return

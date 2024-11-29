@@ -15,7 +15,7 @@ public struct KatalogInteractor<Response, Repo: Repository>: KatalogUseCase wher
         self.repo = repo
     }
     
-    func getKatalog(page: Int) -> RxSwift.Observable<[Response]> {
+    public func getKatalog(page: Int) -> RxSwift.Observable<[Response]> {
         repo.getKatalog(page: page)
     }
 }
