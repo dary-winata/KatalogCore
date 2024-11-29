@@ -10,7 +10,7 @@ import RxSwift
 public struct SearchInteractor<Response, Repo: Repository>: SearchUseCase where Repo.Response == Response {
     private let repo: Repo
     
-    init(repo: Repo) {
+    public init(repo: Repo) {
         self.repo = repo
     }
     

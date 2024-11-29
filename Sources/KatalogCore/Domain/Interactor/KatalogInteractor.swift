@@ -11,7 +11,7 @@ public struct KatalogInteractor<Response, Repo: Repository>: KatalogUseCase wher
     
     private let repo: Repo
     
-    init(repo: Repo) {
+    public init(repo: Repo) {
         self.repo = repo
     }
     
