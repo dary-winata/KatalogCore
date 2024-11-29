@@ -7,7 +7,7 @@
 
 import RxSwift
 
-public protocol Repository: AnyObject {
+public protocol Repository {
     associatedtype Request
     associatedtype Response
     
