@@ -16,13 +16,9 @@ public protocol Mapper {
     associatedtype Entity
     
     
-    static func mapListGameIntoKatalogGame(with listGame: [ListResponse]) -> [DomainKatalog]
-    
-    static func mapGameIntoDetailGame(with game: DetailRequest) -> DomainDetail
-    
-    static func detailGameEntityIntoDetailGame(with game: Entity) -> DomainDetail
-    
-    static func detailGameIntoEntity(with game: DetailResponse) -> Entity
-    
-    static func mapListEntityIntoKatalogGameModel(listFavorite: [Entity]) -> [DomainKatalog]
+    func mapListGameIntoKatalogGame(with listGame: [ListResponse]) -> [DomainKatalog]
+    func mapGameIntoDetailGame(with game: DetailRequest) -> DomainDetail
+    func detailGameEntityIntoDetailGame(with game: Entity) -> DomainDetail
+    func detailGameIntoEntity(with game: DetailResponse) -> Entity
+    func mapListEntityIntoKatalogGameModel(listFavorite: [Entity]) -> [DomainKatalog]
 }
